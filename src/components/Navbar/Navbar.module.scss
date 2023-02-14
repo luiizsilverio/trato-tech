@@ -43,6 +43,13 @@
 .link {
   color: white;
   font-size: 22px;
+
+  svg {
+    transition: all .4s;
+  }
+  &:hover svg {
+    transform: scale(1.05);
+  }
 }
 
 .busca {

@@ -16,13 +16,12 @@ const iconeProps = {
 export default function Navbar() {
   return (
     <nav className={styles.nav}>
-      <LogoSvg className={styles.logo} />
       <div className={styles.links}>
         <div>
           <a href="/" className={classNames(styles.link, {
             [styles.selected]: window.location.pathname === '/'
           })}>
-            Página inicial
+            <LogoSvg className={styles.logo} />
           </a>
         </div>
       </div>
