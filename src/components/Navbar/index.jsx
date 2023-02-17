@@ -1,3 +1,4 @@
+import { Link, useLocation } from 'react-router-dom';
 import classNames from 'classnames';
 import { ReactComponent as LogoSvg } from '../../assets/logo.svg';
 import {
@@ -14,27 +15,29 @@ const iconeProps = {
 }
 
 export default function Navbar() {
+  const location = useLocation();
+
   return (
     <nav className={styles.nav}>
       <div className={styles.links}>
         <div>
-          <a href="/" className={classNames(styles.link, {
-            [styles.selected]: window.location.pathname === '/'
+          <Link to="/" className={classNames(styles.link, {
+            [styles.selected]: location.pathname === '/'
           })}>
-            <LogoSvg className={styles.logo} />
-          </a>
+            <LogoSvg className={styles.logo}  />
+          </Link>
         </div>
       </div>
       <div className={styles.busca}>
         <Busca />
       </div>
       <div className={styles.icones}>
-        <a href="/carrinho">
-          {window.location.pathname === '/carrinho'
+        <Link to="/carrinho">
+          {location.pathname === '/carrinho'
             ? <RiShoppingCartFill {...iconeProps} />
             : <RiShoppingCart2Line {...iconeProps} />
           }
-        </a>
+        </Link>
       </div>
     </nav>
   )
