@@ -11,7 +11,7 @@ Trata-se de um E-comerce simples desenvolvido em React, com carrinho de vendas e
 - Classnames
 
 ## :camera_flash: Screenshots
-![](https://github.com/luiizsilverio/trato-tech/blob/main/src/assets/trato.gif)
+![](https://github.com/luiizsilverio/trato-tech/blob/master/src/assets/trato.gif)
 
 
 ## :car: Iniciando a aplicação
